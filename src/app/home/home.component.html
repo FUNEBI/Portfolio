@@ -1,0 +1,209 @@
+<div id="wrapper" (mousemove)="move($event)">
+    <div class="container-fluid">    
+        <div class="row justify-space-between">
+            <div class="col-lg-5 col-md-12 col-sm-12 mt-3 mr-1">
+                <div class="m-4 fixer">
+                    
+                    <h1 
+                        class="mt-4 mb-1 px-5 py-4 menu-header mb-3 animate__animated animate__fadeInLeft"
+                    >
+                        Hello, I'm Funebi Owei
+                    </h1>                 
+            
+                    <div class="px-5 mb-5 animate__animated animate__fadeIn">
+                        <p>
+                            A junior frontend developer based in Lagos, Nigeria. I am passionate about building responsive, user friendly and beautiful websites. I am a passionate and motivated frontend developer with a keen eye for design and a passion for creating alluring digital experiences that captivate and delight users. 
+                        </p>
+                         
+                        <p>
+                            I am eager to contribute my skills to create engaging and responsive web applications and websites. I am constantly seeking out new challenges and opportunities to expand my skill set in a collaborative environment.
+                        </p>
+    
+                    </div>
+                    <ul class="nav px-5 animate__animated animate__slideInDown">
+                        <li class="nav-item" *ngIf="homeArea == false">
+                            <a class="nav-link" (click)="getSelectedValue($event)" href="#">Skills</a>
+                          </li>
+                        <li class="nav-item" *ngIf="AboutPage == false">
+                          <a class="nav-link" (click)="getSelectedValue($event)" href="#">About</a>
+                        </li>
+                        <li class="nav-item" *ngIf="projectsPage == false">
+                          <a class="nav-link" href="#" (click)="getSelectedValue($event)">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" target="_blank" [routerLink]="['/resume/']">View Résumé</a>
+                          </li>
+                      </ul>
+                      <ul class="nav px-5 animate__animated animate__slideInUp">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="https://www.facebook.com/funebiowei?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://github.com/FUNEBI" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="mailto:oweifumi@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="https://www.instagram.com/nebi_owei?igsh=MWtzaHRvOHoxZDR0bw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://www.linkedin.com/in/funebicodes" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                          </li>
+                    </ul>
+                     
+                </div>
+              </div>
+            <div class="col-lg-7 col-md-12 col-sm-12 mt-3 px-5 py-5 ml-3">
+                <ng-container *ngIf="projectsPage == true">
+                    <h1 class="py-5 text-center">Projects</h1>
+                    <div class="row ml-5 project-row animate__animated animate__slideInDown">
+                        <div class="col-lg-3 col-md-12 col-sm-12 mt-5 py-5">
+                            <img src="assets/image/Screenshot 2024-04-10 131320.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 mt-3 py-5">
+                            <h4 class="text-center">Photography Landing Page</h4>
+                            <a href="https://ph0tography-landing-page-built-with-angular-qi3l.vercel.app/" target="_blank" style="text-decoration: none;color: #C8A2C8">
+                                <p>
+                                    A photography landing page with anappealing layout featuring stunning pictures showcased in a grid-style gallery. The navigation allows visitors to seamlessly explore different sections of the page. It presents a compelling platform for photographers to display their work in a visually impactful manner.
+                                </p>
+                                <p>
+                                    <button class="btn skills-bttn">Angular</button> &nbsp;
+                                    <button class="btn skills-bttn">Bootstrap</button> &nbsp;
+                                    <button class="btn skills-bttn">HTML & CSS</button>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row project-row animate__animated animate__slideInUp">
+                        <div class="col-lg-3 col-md-12 col-sm-12 mt-5 py-5">
+                            <img src="/assets/image/Screenshot 2024-04-10 131640.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 mt-3 py-5">
+                            <h4 class="text-center">Fumiz Corner</h4>
+                            <a href="https://fumiz-corner-restaurant-angular-project.vercel.app/" target="_blank" style="text-decoration: none;color: #C8A2C8">
+                                <p>
+                                    A simple website for a restaurant providing easy to navigate pages with colour scheme appealing to the purpose. It offers header options for customers to navigate the menu and the services offered by the restaurant.
+                                </p>
+                                <p>
+                                    <button class="btn skills-bttn">Angular</button> &nbsp;
+                                    <button class="btn skills-bttn">Bootstrap</button> &nbsp;
+                                    <button class="btn skills-bttn">HTML & CSS</button>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row project-row animate__animated animate__slideInDown">
+                        <div class="col-lg-3 col-md-12 col-sm-12 mt-5 py-5">
+                            <img src="/assets/image/shopracks.png" class="img-fluid border-rounded" alt="">
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 mt-3 py-5">
+                            <h4 class="text-center">ShopRacks</h4>
+                            <a href="https://shopracks-xi.vercel.app/" target="_blank" style="text-decoration: none;color: #C8A2C8">
+                                <p>
+                                    A landing page for an e-commerce platform built with a focus on enabling businesses to document and track invoices; manage and track inventories; manage orders; and provide analytical reports based on the data available. The landing page provides a simple layout for clients to explore the wide range of products and view descriptions.
+                                </p>
+                                <p>
+                                    <button class="btn skills-bttn">Bootstrap</button> &nbsp;
+                                    <button class="btn skills-bttn">HTML & CSS</button>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row project-row animate__animated animate__slideInUp">
+                        <div class="col-lg-3 col-md-12 col-sm-12 mt-5 py-5">
+                            <img src="/assets/image/waves.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 mt-3 py-5">
+                            <h4 class="text-center">Waves Bistro</h4>
+                            <a href="https://waves-bistro.vercel.app/"  target="_blank" style="text-decoration: none;color: #C8A2C8">
+                                <p>
+                                    The recreation of a one-page restaurant platform with a seaside backdrop. The page offers a layout simple and easy to navigate between several buttons with warm and inviting colours
+                                </p>
+                                <p>
+                                    <button class="btn skills-bttn">Angular</button> &nbsp;
+                                    <button class="btn skills-bttn">Bootstrap</button> &nbsp;
+                                    <button class="btn skills-bttn">HTML & CSS</button> 
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row project-row animate__animated animate__slideInDown">
+                        <div class="col-lg-3 col-md-12 col-sm-12 mt-5 py-5">
+                            <img src="/assets/image/Screenshot 2024-04-10 131444.png" class="img-fluid" alt="">
+                        </div>
+                        <div class="col-lg-9 col-md-12 col-sm-12 mt-3 py-5">
+                            <h4 class="text-center">Allure e-Commerce website</h4>
+                            <a href="https://allure-cosmetics-shop.vercel.app/" target="_blank" style="text-decoration: none;color: #C8A2C8">
+                                <p>
+                                    An e-commerce website with a focus on cosmetics. It has a clean and modern design, with a minimalist layout that emphasizes the products. The navigation presents a simple menu structure that makes it easy for users to explore products and purchase the products.
+                                </p>
+                                <p>
+                                    <button class="btn skills-bttn">Angular</button> &nbsp;
+                                    <button class="btn skills-bttn">Bootstrap</button> &nbsp;
+                                    <button class="btn skills-bttn">HTML & CSS</button> 
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="AboutPage == true">
+                    <div class="about-div animate__animated animate__slideInUp">
+                        <h1 class="py-5 text-center">About</h1>
+                        <p>
+                            I am a passionate and motivated front-end developer with a keen eye for design and a passion for creating alluring digital experiences that captivate and delight users.With a solid foundation in HTML, CSS, and JavaScript, I am eager to contribute my skills to create engaging and responsive web applications and websites.
+                        </p>
+                        <p>
+                            I began my journey into web development out of a fascination for design and technology. I have since grown my desire based on the limitless boundaries web design offers. Through informal learning institutions, self-learning and hands-on projects, I have honed my skills in responsive web design and cultivated a solid understanding of front-end frameworks like Angular and React, and version control systems. 
+                        </p>
+                        <p>
+                            I am a frontend developer with professional experience working as a software engineer intern in <a target="_blank" style="text-decoration: none; color:#C8A2C8 ; font-weight: bold;" href="https://www.coure-tech.com/">COURE Software and Systems Ltd</a> which offers solutions to different organisations around the world. I have formidable experience in handling online platforms migrations, development, design of software platforms and API integrations e.t.c. 
+                        </p>
+                        <p>
+                            Some technologies used were in :- <a target="_blank" style="text-decoration: none; color:#C8A2C8 ; font-weight: bold;" href="https://www.coure-tech.com/">COURE Software and Systems Ltd</a>
+                            <br> <br>
+                            <button class="btn skills-bttn">Tyescript</button> &nbsp;
+                            <button class="btn skills-bttn">Javascript</button> &nbsp;
+                            <button class="btn skills-bttn">Angular</button>&nbsp;
+                            <button class="btn skills-bttn">Bootstrap</button>&nbsp;
+                        </p>
+                        <p>
+                            <button class="btn skills-bttn">Microsoft Azure</button>&nbsp;
+                            <button class="btn skills-bttn">Swagger</button> &nbsp;
+                            <button class="btn skills-bttn">SCSS</button>
+                        </p>
+                        <p>
+                            I am constantly seeking out new challenges and opportunities to expand my skill set in a collaborative environment. Notwithstanding the objective, I approach each project with tenacity, attention to detail and a commitment to excellence. 
+                            I am excited to embark on new projects, embrace emerging technologies, and contribute to innovative solutions and I'm open to opportunities where I can contribute, learn and grow.
+                        </p>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="homeArea == true">
+                    <div class="px-5 my-5 animate__animated animate__backInDown">
+                        <h1 class="text-center">Skills</h1>
+                        <p>
+                            <button class="btn skills-bttn mt-2">HTML</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">CSS</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Bootstrap</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Skeleton</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Javascript</button> 
+                        </p>
+                        <p>
+                            <button class="btn skills-bttn mt-2">Typescript</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Angular</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Swagger</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Python</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Git</button> &nbsp;
+                        </p>
+                        <p>
+                            <button class="btn skills-bttn mt-2">Microsoft Azure</button> &nbsp;
+                            <button class="btn skills-bttn mt-2">Github</button> &nbsp;
+                        </p>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+
+    </div> 
+</div>
+
